@@ -1,5 +1,5 @@
 import { siteConfig } from "@/config/site";
-import { Link, Button, Card, Chip } from "@heroui/react";
+import { Link, Button } from "@heroui/react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import React from "react";
 

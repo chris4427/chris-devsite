@@ -1,5 +1,4 @@
 import { Link } from "@heroui/link";
-import { Input } from "@heroui/input";
 import {
   Navbar as HeroUINavbar,
   NavbarBrand,
@@ -14,7 +13,7 @@ import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/general/theme-switch";
-import { GithubIcon, SearchIcon } from "@/components/icons";
+import { GithubIcon } from "@/components/icons";
 import { Divider } from "@heroui/react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
@@ -65,7 +64,7 @@ export const Navbar = () => {
               <Link
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
+                  "data-[active=true]:text-primary data-[active=true]:font-medium"
                 )}
                 color="foreground"
                 href={item.href}

@@ -1,4 +1,4 @@
-import { useParams, Link as RouterLink } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 // import { Link } from "@heroui/react";
 import { getPostById } from "@/api/blogPosts"; // your fetch function

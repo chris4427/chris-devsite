@@ -1,6 +1,7 @@
 import express, { Express } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import path from "path";
 import { setupSwagger } from "./docs/swagger";
 
 //routes
@@ -12,12 +13,22 @@ dotenv.config();
 const app: Express = express();
 
 // Middleware
-app.use(cors());
+if (process.env.NODE_ENV === "development") {
+  app.use(cors());
+}
 app.use(express.json());
 
-// Routes
+// API routes
 app.use("/api/posts", blogPostRoutes);
 app.use("/api/projects", projectRoutes);
+
+// Serve React static files
+app.use(express.static(path.join(__dirname, "..", "client", "build")));
+
+// Catch-all to serve React app for other routes
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "client", "build", "index.html"));
+});
 
 // Swagger docs setup
 setupSwagger(app);

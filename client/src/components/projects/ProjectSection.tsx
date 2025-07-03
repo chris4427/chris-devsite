@@ -1,8 +1,4 @@
-import React, { useState } from "react";
-import { Card, CardBody, CardFooter, Link, Image, Button } from "@heroui/react";
-import { Link as RouterLink } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { Icon } from "@iconify/react/dist/iconify.js";
 
 import { getAllProjects } from "@/api/projects";
 import { ProjectCard } from "./ProjectCard";
