@@ -1,0 +1,28 @@
+// schema.prisma
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model BlogPost {
+  id      Int      @id @default(autoincrement())
+  title   String
+  excerpt String
+  content String // Full HTML or Markdown content
+  date    DateTime
+}
+
+model Project {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  github      String
+  demo        String
+  languages   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
