@@ -78,7 +78,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
         <p className="text-default-500">{description}</p>
       </CardBody>
-      <CardFooter className="flex gap-1">
+      <CardFooter className="flex flex-wrap gap-1">
         {languageList?.map((lang) => (
           <Chip
             key={lang}

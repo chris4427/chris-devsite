@@ -6,7 +6,7 @@ async function main() {
   await prisma.blogPost.create({
     data: {
       title: "How I Built My Personal Developer Site",
-      date: new Date("2025-07-03"),
+      date: new Date("2025-07-03T16:21:00Z"),
       excerpt:
         "Documenting how I put together my developer portfolio site, from tech choices to challenges.",
       content: `<!DOCTYPE html>
@@ -91,10 +91,10 @@ async function main() {
                   </p>
 
                   <h3>HeroUI Design:</h3>
-                  <p><img src="/blogImages/HeroUIDesign.png" alt="HeroUI Site Image"></p>
+                  <img src="/blogImages/HeroUIMockup.png" alt="HeroUI Site Image">
 
                   <h3>My Finalish Design:</h3>
-                  <p><em>inset image later</em></p>
+                  <img src="/blogImages/ChrisSite.png" alt="Chris Site Image">
 
                   <h2>Challenges & What I Learned</h2>
                   <p>

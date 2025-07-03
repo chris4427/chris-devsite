@@ -32,7 +32,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
         <Link
           className={clsx(
             link({ color: "foreground" }),
-            "data-[active=true]:text-primary data-[active=true]:font-medium",
+            "data-[active=true]:text-primary data-[active=true]:font-medium"
           )}
           color="foreground"
           href={`/blog/${id}`}

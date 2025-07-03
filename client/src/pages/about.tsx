@@ -229,7 +229,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">Languages & Frameworks</h4>
-                  <div className="grid grid-cols-2 gap-4 text-default-500">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-default-500">
                     <ul className="list-disc list-inside">
                       <li>TypeScript</li>
                       <li>React</li>

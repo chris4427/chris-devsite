@@ -1,8 +1,8 @@
 import { useParams, Link as RouterLink } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { Link } from "@heroui/react";
+// import { Link } from "@heroui/react";
 import { getPostById } from "@/api/blogPosts"; // your fetch function
-import { getAllPosts } from "@/api/blogPosts"; // to fetch all posts for related posts
+// import { getAllPosts } from "@/api/blogPosts"; // to fetch all posts for related posts
 import DefaultLayout from "@/layouts/default";
 
 export const BlogPostComponent: React.FC = () => {
@@ -21,14 +21,14 @@ export const BlogPostComponent: React.FC = () => {
   });
 
   // Fetch all posts for related posts
-  const {
-    data: blogPosts,
-    isLoading,
-    isError,
-  } = useQuery({
-    queryKey: ["blog-posts"],
-    queryFn: getAllPosts, // 👈 use your prewritten function
-  });
+  // const {
+  //   data: blogPosts,
+  //   isLoading,
+  //   isError,
+  // } = useQuery({
+  //   queryKey: ["blog-posts"],
+  //   queryFn: getAllPosts, // 👈 use your prewritten function
+  // });
 
   const formattedDate = new Date(blogPost?.date ?? "").toLocaleDateString(
     "en-US",
@@ -36,7 +36,7 @@ export const BlogPostComponent: React.FC = () => {
       month: "2-digit",
       day: "2-digit",
       year: "numeric",
-    },
+    }
   );
 
   const BlogPostSkeleton = () => (
@@ -69,7 +69,7 @@ export const BlogPostComponent: React.FC = () => {
               dangerouslySetInnerHTML={{ __html: blogPost.content }}
             />
             <div className="mt-12">
-              <h2 className="text-2xl font-semibold mb-4">Related Posts</h2>
+              {/* <h2 className="text-2xl font-semibold mb-4">Related Posts</h2>
               <ul className="space-y-2">
                 {blogPosts
                   ?.filter((p) => p.id !== blogPost.id)
@@ -84,7 +84,7 @@ export const BlogPostComponent: React.FC = () => {
                       </Link>
                     </li>
                   ))}
-              </ul>
+              </ul> */}
             </div>
           </>
         )}

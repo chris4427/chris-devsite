@@ -4,7 +4,7 @@ CREATE TABLE "BlogPost" (
     "title" TEXT NOT NULL,
     "excerpt" TEXT NOT NULL,
     "content" TEXT NOT NULL,
-    "date" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+    "date" DATETIME NOT NULL
 );
 
 -- CreateTable
