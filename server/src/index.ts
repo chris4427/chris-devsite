@@ -2,7 +2,7 @@ import express, { Express } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import path from "path";
-import { setupSwagger } from "./docs/swagger";
+// import { setupSwagger } from "./docs/swagger";
 
 //routes
 import blogPostRoutes from "./routes/blogPosts";
@@ -31,7 +31,7 @@ app.get("*", (req, res) => {
 });
 
 // Swagger docs setup
-setupSwagger(app);
+// setupSwagger(app);
 
 // Start server
 const PORT = process.env.PORT || 4000;
