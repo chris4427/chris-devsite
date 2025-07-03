@@ -22,14 +22,6 @@ app.use(express.json());
 app.use("/api/posts", blogPostRoutes);
 app.use("/api/projects", projectRoutes);
 
-// Serve React static files
-app.use(express.static(path.join(__dirname, "..", "client", "build")));
-
-// Catch-all to serve React app for other routes
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "client", "build", "index.html"));
-});
-
 // Swagger docs setup
 setupSwagger(app);
 
