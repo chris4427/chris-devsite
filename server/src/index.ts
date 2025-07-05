@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === "development") {
 }
 
 app.use(cors({
-  origin: 'https://chris-devsite-su8am.ondigitalocean.app',
+  origin: ['https://chrisray.dev', 'https://chris-devsite-su8am.ondigitalocean.app'],
 }));
 
 app.use(express.json());
