@@ -31,7 +31,7 @@ app.use("/api/projects", projectRoutes);
 setupSwagger(app);
 
 // Start server
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
   console.log(`Swagger docs at http://localhost:${PORT}/docs`);
