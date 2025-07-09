@@ -25,7 +25,7 @@ async function main() {
 
                   <h2>Why I Built the Site</h2>
                   <p>
-                    Most of the work I’d done before this project involved improving or adding features to existing websites and never
+                    Most of the work I have done before this project involved improving or adding features to existing websites and never
                     building one from the ground up. I wanted to change that. I was curious what it would be like to start with nothing
                     and make all the decisions myself.
                   </p>
